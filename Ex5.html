@@ -1,217 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAVASCRIPT </title>    
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-initial-scale=1.0">
+    </head>
 
-<title>Experiment 5</title>
-<!-- CSS only -->
-<link rel="Ex5.js"
+    <style>
+         body {
+            background-color: yellow; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <body>        
+        <h1 class="text-center p-5 text-danger"><b>Dom Elements and Events</b></h1>
+        <hr class="border border-danger border-2 opacity-50">
 
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min
-.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoR
-xT2MZw1T" crossorigin="anonymous">
-
-<!-- JavaScript Bundle with Popper -->
-<script
-
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle
-.min.js"
-integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9As
-Sv4jD4Xa" crossorigin="anonymous"></script>
-
-</head>
-<body class="bg-dark">
-<h1 class="text-center p-5 text-warning">JAVASCRIPT DOM ELEMENTS
-
-AND EVENTS</h1>
-
-<hr class="border border-warning border-2 opacity-50">
-
-<section id="Q1">
-<h3 class="text-center text-white bg mt-5">1. Shortest And
-
-Longest Word</h3>
-
-<div class="container col-sm-6 mt-5">
-<label for="t1" class="form-label text-white">Enter a
-
-String</label>
-
-<input type="text" id="t1" class="form-control">
-<div class="text-center ">
-<button class="btn btn-outline-warning mt-5"
-
-onclick="q1()">Submit</button>
-
-</div>
-<h5 id="result1" class="text-center text-warning mt-5
-
-mb-5"></h5>
-</div>
-<hr class="border border-warning border-2 opacity-50">
-</section>
-
-<section id="Q2">
-<h3 class="text-center text-white bg mt-5">2. BMI
-
-Calculator</h3>
-
-<div class="container col-sm-3 mt-5">
-<label for="t2" class="form-label text-white">Enter
-
-Height</label>
-
-<input type="text" id="t2" class="form-control">
-<div class="form-text text-white">Height in meters</div>
-<label for="t3" class="form-label text-white mt-4">Enter
-
-Weight</label>
-
-<input type="text" id="t3" class="form-control">
-<div class="form-text text-white">Weight in kgs</div>
-<div class="text-center ">
-<button class="btn btn-outline-warning mt-5"
-
-onclick="q2()">Submit</button>
-
-</div>
-<h5 id="result2" class="text-center text-warning mt-5
-
-mb-5"></h5>
-</div>
-<hr class="border border-warning border-2 opacity-50">
-</section>
-
-<section id="Q3">
-    <h3 class="text-center text-white bg mt-5">3. Fruit Farm</h3>
-<div class="container col-sm-3 mt-5">
-<label for="height" class="form-label text-white">Enter
-
-Height</label>
-
-<input type="text" id="height" class="form-control">
-<label for="width" class="form-label text-white
-
-mt-4">Enter Width</label>
-
-<input type="text" id="width" class="form-control">
-<div class="text-center ">
-<button class="btn btn-outline-warning mt-5 mb-5"
-
-onclick="q3()">Submit</button>
-
-</div>
-</div>
-<h5 id="garden" class="text-center mb-5"></h5>
-<hr class="border border-warning border-2 opacity-50">
-</section>
-
-<section id="Q4">
-<h3 class="text-center text-white bg mt-5">4. Currency
-
-Converter</h3>
-
-<div class="container col-sm-3 mt-5">
-<div class="row">
-<div class="col-8">
-<label for="value" class="form-label text-white
-
-">Enter Value</label>
-<input type="text" id="value"
-
-class="form-control">
-</div>
-<div class="col-4">
-<label for="from" class="form-label
-
-text-white">Choose From</label>
-
-<select id="from" class="form-select">
-<option value="INR" selected>INR</option>
-<option value="USD">USD</option>
-</select>
-</div>
-</div>
-<div class="row">
-<div class="col-12 text-center">
-<label for="to" class="form-label text-white
-
-mt-3">Convert To</label>
-
-<select id="to" class="form-select">
-<option value="USD" selected>USD</option>
-<option value="INR">INR</option>
-</select>
-</div>
-</div>
-<div class="text-center ">
-<button class="btn btn-outline-warning mt-5 mb-5"
-
-onclick="q4()">Convert</button>
-</div>
-</div>
-<h5 id="convertedValue" class="text-center text-warning
-
-mb-5"></h5>
-
-<hr class="border border-warning border-2 opacity-50">
-</section>
-
-<section id="Q5">
-<h3 class="text-center text-white bg mt-5">5. Coin Flip</h3>
-<div class="container col-sm-3 mt-5">
-<div class="text-center">
-<button class="btn btn-outline-warning btn-lg mb-5"
-
-onclick="q5()">Flip</button>
-</div>
-</div>
-<div class="text-center mb-5" id="coin"></div>
-<h5 id="count" class="text-center text-warning"></h5>
-<hr class="border border-warning border-2 opacity-50">
-</section>
-
-<section id="Q6">
-<h3 class="text-center text-white bg mt-5">6. Cake Order
-
-Form</h3>
-
-<div class="container col-sm-3 mt-5">
-    <label for="cake" class="form-label text-white">Choose
-
-        Cake</label>
-        
-        <select id="cake" class="form-select">
-        <option value="Small" selected>Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-        </select>
-        
-        <label for="tip" class="form-label text-white mt-3">Choose
-        
-        Tip</label>
-        
-        <select id="tip" class="form-select">
-        <option value="0" selected>None</option>
-        <option value="10">10%</option>
-        <option value="15">15%</option>
-        <option value="20">20%</option>
-        </select>
-        <div class="text-center">
-        <button class="btn btn-outline-warning mt-5 mb-5"
-        
-        onclick="q6()">Calculate Order</button>
-        
-        </div>
-        </div>
-        <h5 id="cost" class="text-center text-warning mb-5"></h5>
-        <hr class="border border-warning border-2 opacity-50">
+        <section id="Q1">
+            <h3 class="text-center text-danger bg mt-5"><b>1. Shortest And Longest Word</b></h3>
+            <div class="container col-sm-6 mt-5">
+                <label for="t1" class="form-label text-danger"><b>Enter a String</b></label>
+                <input type="text" id="t1" class="form-control">
+                <div class="text-center">
+                    <button class="btn btn-outline-success mt-5" onclick="q1()"><b>Submit</b></button>
+                </div>
+                <h5 id="result1" class="text-center text-warning mt-5 mb-5"></h5>             
+            </div>
+            <hr class="border border-danger border-2 opacity-50">
         </section>
-        <script src="ex5.js"></script>
-</body>
-</html>
+        
+        <section id="Q2">
+            <h3 class="text-center text-danger bg mt-5"><b>2. BMI Calculator</b></h3>
+            <div class="container col-sm-3 mt-5">
+                <label for="t2" class="form-label text-danger"><b>Enter Height</b></label>
+                <input type="text" id="t2" class="form-control">
+                <div class="form-text text-danger"><b>Height in meters</b></div>
+                <label for="t3" class="form-label text-danger mt-4"><b>Enter Weight</b></label>
+                <input type="text" id="t3" class="form-control">
+                <div class="form-text text-danger"><b>Weight in kgs</b></div>
+                <div class="text-center ">
+                    <button class="btn btn-outline-success mt-5" onclick="q2()"><b>Submit</b></button>
+                </div>
+                <h5 id="result2" class="text-center text-warning mt-5 mb-5"></h5>             
+            </div>
+            <hr class="border border-danger border-2 opacity-50">
+        </section>
+
+        <section id="ques3">
+            <h3 class="text-center text-danger bg mt-5"><b>3. Fruit Farm</b></h3>
+            <div class="container col-sm-3 mt-5">
+                <div class="form-text text-danger"><b>Rows :</b></div><br>
+                <input id="rows" type="text"><br><br>
+                <div class="form-text text-danger"><b>Columns :</b></div><br>
+                <input id="cols" type="text"><br><br>
+                <button class="btn btn-outline-success mt-5" onclick="q3()"><b>Plant Garden</b></button><br>
+                <div id="garden"></div><br>
+            </div>
+            <hr class="border border-danger border-2 opacity-50">
+        </section>
+
+        <section id="Q4">
+            <h3 class="text-center text-danger bg mt-5"><b>4. Currency Converter</b></h3>
+            <div class="container col-sm-3 mt-5">
+                <div class="row">
+                    <div class="col-8">
+                        <label for="value" class="form-label text-danger "><b>Enter Value</b></label>
+                        <input type="text" id="value" class="form-control">
+                    </div>
+                    <div class="col-4">
+                        <label for="from" class="form-label text-danger"><b>Choose From</b></label>
+                        <select id="from" class="form-select">
+                            <option value="INR" selected>INR</option>
+                            <option value="USD">USD</option>                    
+                        </select>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <label for="to" class="form-label text-danger mt-3"><b>Convert To</b></label>
+                        <select id="to" class="form-select">
+                            <option value="USD" selected>USD</option>
+                            <option value="INR">INR</option>                    
+                        </select>
+                    </div>
+                </div>                
+                <div class="text-center ">
+                    <button class="btn btn-outline-success mt-5 mb-5" onclick="q4()"><b>Convert</b></button>
+                </div>                            
+            </div>
+            <h5 id="convertedValue" class="text-center text-warning mb-5"></h5> 
+            <hr class="border border-danger border-2 opacity-50">
+        </section>
+
+        <section id="Q5">
+            <h3 class="text-center text-danger bg mt-5"><b>5. Coin Flip</b></h3>
+            <div class="container col-sm-3 mt-5">                
+                <div class="text-center">
+                    <button class="btn btn-outline-success btn-lg mb-5" onclick="q5()"><b>Flip</b></button>
+                </div>                            
+            </div>
+            <div class="text-center mb-5" id="coin"></div>
+            <h5 id="count" class="text-center text-danger"></h5> 
+            <hr class="border border-danger border-2 opacity-50">
+        </section>
+
+        <section id="Q6">
+            <h3 class="text-center text-danger bg mt-5"><b>6. Cake Order Form</b></h3>
+            <div class="container col-sm-3 mt-5">   
+                <label for="cake" class="form-label text-danger"><b>Choose Cake</b></label>
+                        <select id="cake" class="form-select">
+                            <option value="Small" selected>Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>                    
+                        </select> 
+
+                <label for="tip" class="form-label text-danger mt-3"><b>Choose Tip</b></label>
+                <select id="tip" class="form-select">
+                    <option value="0" selected>None</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>                    
+                </select>  
+                <div class="text-center">
+                    <button class="btn btn-outline-success mt-5 mb-5" onclick="q6()"><b>Calculate Order</b></button>
+                </div>                                     
+            </div>
+            <h5 id="cost" class="text-center text-danger mb-5"></h5>             
+            <hr class="border border-danger border-2 opacity-50">
+        </section> 
+
+        
+        <script src="Ex5.js"></script>
+    </body>
